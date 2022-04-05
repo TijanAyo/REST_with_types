@@ -1,4 +1,4 @@
-import {DocumentDefinition} from 'mongoose'
+import {DocumentDefinition} from "mongoose"
 import UserModel, { UserDocument } from '../models/user.model';
 
 
