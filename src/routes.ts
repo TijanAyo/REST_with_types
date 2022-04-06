@@ -8,7 +8,9 @@ function routes(app: Express){
         res.status(200).send('okay')
     })
 
-    app.post('/api/users', validate(createUserSchema), createUserHandler)
+    app.post('/api/v1/users', validate(createUserSchema), createUserHandler)
 }
 
 export default routes
+
+//validate(createUserSchema),

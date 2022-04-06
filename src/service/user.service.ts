@@ -1,8 +1,8 @@
 import {DocumentDefinition} from "mongoose"
-import UserModel, { UserDocument } from '../models/user.model';
+import UserModel, { UserDocument } from "../models/user.model";
 
 
-export const createUser = async (input: DocumentDefinition<Omit<UserDocument, 'createdAt' | 'updatedAt' | 'comparePassword'>>) =>{
+export const createUser = async (input: DocumentDefinition<Omit<UserDocument, "createdAt" | "updatedAt" | "comparePassword">>) =>{
     try{
         const user = await UserModel.create(input)
         return user
@@ -11,3 +11,6 @@ export const createUser = async (input: DocumentDefinition<Omit<UserDocument, 'c
         throw new Error(err)
     }
 }
+
+// (input: DocumentDefination<UserDocument>)
+// (input: DocumentDefinition<Omit<UserDocument, "createdAt" | "updatedAt" | "comparePassword">>)

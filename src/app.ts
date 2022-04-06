@@ -1,8 +1,8 @@
 import express, {Response, Request} from 'express'
 
-import config from 'config'
-import Connect from './utils/connect'
-import routes from './routes'
+import config from "config"
+import Connect from "./utils/connect"
+import routes from "./routes"
 
 const app = express()
 
