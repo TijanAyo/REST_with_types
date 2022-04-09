@@ -7,13 +7,7 @@ import routes from "./routes"
 const app = express()
 
 app.use(express.json())
-app.use(express.urlencoded({extended: true}))
-
-/* app.get('/status', (req: Request, res: Response): object =>{
-    return res.status(200).json({
-        message: 'Hello Humans'
-    })
-}) */
+app.use(express.urlencoded({extended: false}))
 
  
 const PORT = config.get<number>('port')
